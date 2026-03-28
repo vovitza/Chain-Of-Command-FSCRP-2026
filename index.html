@@ -3,202 +3,243 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Florida State Roleplay | Official 2026 Chain of Command</title>
+    <title>FSCRP | High Rank Guide</title>
     <style>
         :root {
             --primary-gradient: linear-gradient(135deg, #1a2a6c, #b21f1f, #fdbb2d);
-            --glass-bg: rgba(255, 255, 255, 0.88);
-            --accent-blue: #0072ff;
-            --accent-orange: #ff4b2b;
+            --glass-bg: rgba(255, 255, 255, 0.92);
+            --ocean-blue: #0072ff;
+            --accent-orange: #ff8c00;
         }
 
         body { 
             font-family: 'Poppins', sans-serif; 
             margin: 0; 
             padding: 20px; 
-            color: #222;
+            color: #333;
             background: url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80') no-repeat center center fixed;
             background-size: cover;
         }
 
         .container { 
-            max-width: 900px; 
+            max-width: 1000px; 
             margin: 20px auto; 
             background: var(--glass-bg); 
-            backdrop-filter: blur(12px);
-            padding: 40px; 
-            border-radius: 20px; 
-            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+            backdrop-filter: blur(15px);
+            padding: 50px; 
+            border-radius: 25px; 
+            box-shadow: 0 15px 35px rgba(0,0,0,0.2);
             border: 1px solid rgba(255,255,255,0.4);
         }
         
-        header { 
-            text-align: center; 
-            padding: 10px;
-            margin-bottom: 30px;
-        }
+        header { text-align: center; margin-bottom: 40px; border-bottom: 4px solid var(--accent-orange); padding-bottom: 20px; }
+        h1 { font-size: 3rem; margin: 0; background: var(--primary-gradient); -webkit-background-clip: text; -webkit-text-fill-color: transparent; font-weight: 900; }
+        .sub-header { font-weight: bold; letter-spacing: 2px; color: #444; margin-top: 10px; }
 
-        h1 { 
-            font-size: 3rem; 
-            margin: 0; 
-            background: var(--primary-gradient);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            font-weight: 800;
-        }
-        
-        /* Updated: Plain text for the sub-title */
-        .date-status { 
-            display: block;
-            color: #444;
-            font-size: 1.4rem;
-            font-weight: 700;
-            margin-top: 5px;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-        }
-        
-        .update-tag {
-            color: #777;
-            font-size: 0.9rem;
-            margin-top: 10px;
-        }
-        
-        .intro-box { 
-            background: rgba(255, 255, 255, 0.5);
-            padding: 20px; 
-            border-radius: 15px; 
-            margin-bottom: 35px; 
-            border-left: 8px solid #fdbb2d;
-        }
+        .section-box { background: rgba(255, 255, 255, 0.6); padding: 25px; border-radius: 15px; margin-bottom: 30px; border-left: 8px solid #fdbb2d; }
+        h2 { background: var(--primary-gradient); color: white; padding: 12px 20px; border-radius: 10px; font-size: 1.4rem; text-transform: uppercase; margin-top: 40px; }
+        h3 { color: var(--ocean-blue); border-bottom: 2px solid #eee; padding-bottom: 5px; margin-top: 25px; }
 
-        .section { margin-bottom: 40px; }
+        ul { line-height: 1.8; }
+        li { margin-bottom: 10px; }
 
-        h2 { 
-            background: var(--primary-gradient); 
-            color: white; 
-            padding: 12px 20px; 
-            border-radius: 10px; 
-            font-size: 1.3rem; 
-            text-transform: uppercase;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-        }
-        
-        .rank-category { 
-            margin-bottom: 15px; 
-            padding: 18px; 
-            background: rgba(255,255,255,0.7);
-            border-radius: 12px;
-            transition: transform 0.2s, background 0.2s;
-        }
+        table { width: 100%; border-collapse: collapse; margin: 20px 0; background: white; border-radius: 10px; overflow: hidden; }
+        th { background: #1a2a6c; color: white; padding: 15px; text-align: center; }
+        td { padding: 15px; text-align: center; border: 1px solid #eee; }
+        tr:nth-child(even) { background: #f9f9f9; }
 
-        .rank-category:hover { 
-            transform: translateY(-3px);
-            background: rgba(255,255,255,0.9);
-        }
-
-        .rank-title { 
-            font-weight: 800; 
-            color: var(--accent-blue);
-            text-transform: uppercase; 
-            font-size: 0.9rem;
-            display: block;
-            margin-bottom: 10px;
-            border-bottom: 1px solid #ddd;
-        }
-
-        .holders { color: #333; font-weight: 600; list-style: none; padding: 0; margin: 0; }
-        .highlight { color: #d32f2f; font-weight: 700; }
-
-        .contact-info { 
-            background: white;
-            padding: 20px; 
-            border-radius: 15px; 
-            font-size: 1rem; 
-            border: 2px solid #eee;
-            text-align: center;
-        }
-
-        footer { 
-            text-align: center; 
-            margin-top: 40px; 
-            font-weight: bold;
-            color: white;
-            text-shadow: 1px 1px 5px rgba(0,0,0,0.7);
-        }
+        .note-box { background: #fff3cd; border: 1px solid #ffeeba; color: #856404; padding: 15px; border-radius: 8px; margin: 20px 0; font-weight: bold; }
+        .footer-info { text-align: center; margin-top: 50px; padding: 30px; background: rgba(0,0,0,0.05); border-radius: 15px; font-size: 0.9rem; }
     </style>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;900&display=swap" rel="stylesheet">
 </head>
 <body>
 
 <div class="container">
     <header>
-        <h1>FLORIDA STATE ROLEPLAY</h1>
-        <div class="date-status">OFFICIAL 2026 CHAIN OF COMMAND</div>
-        <div class="update-tag">Last Updated: 3/28/2026</div>
+        <h1>🌴 FLORIDA STATE ROLEPLAY</h1>
+        <div class="sub-header">HIGH RANK GUIDE</div>
     </header>
 
-    <div class="intro-box">
-        <p>🌴 <strong>Introduction:</strong> This document enlists all the current ranks (Leaders) in Florida State Roleplay.</p>
-        <p>All rights are reserved to <strong>@Marsfnr</strong> and <strong>@MisterCheetos</strong> &copy;.</p>
-    </div>
+    <section>
+        <h2>Overview</h2>
+        <div class="section-box">
+            <p>The High Rank Team in Florida State Roleplay (FSCRP) is responsible for maintaining structure, enforcing rules, overseeing staff, and ensuring the community operates professionally. As a High Rank, you are expected to lead by example, make fair decisions, and contribute to the growth of the server.</p>
+        </div>
+    </section>
 
-    <div class="section">
-        <h2>👑 Leadership & Ownership</h2>
-        <div class="rank-category">
-            <span class="rank-title">Ownership Team</span>
-            <ul class="holders">
-                <li><span class="highlight">Owner:</span> @MisterCheetos & @Marsfnr</li>
-                <li><span class="highlight">Co-Owner:</span> @b0ss1</li>
+    <section>
+        <h2>High Rank Positions</h2>
+        <ul>
+            <li>Senior Manager </li>
+            <li>Manager </li>
+            <li>Staff Supervisor Lead </li>
+            <li>Staff Supervisor </li>
+            <li>Internal Affairs Supervisor </li>
+            <li>Internal Affairs Agent </li>
+        </ul>
+        <p><em>These roles hold authority over Lower Ranking Staff.</em></p>
+    </section>
+
+    <section>
+        <h2>Core Responsibilities</h2>
+        <div class="section-box">
+            <h3>1. Leadership</h3>
+            <ul>
+                <li>Set a professional example at all times </li>
+                <li>Guide and mentor lower-ranking staff </li>
+                <li>Maintain activity and engagement within the team </li>
+            </ul>
+
+            <h3>2. Administration</h3>
+            <ul>
+                <li>Oversee daily server operations </li>
+                <li>Approve major decisions (simple changes, partnerships, etc.) </li>
+            </ul>
+
+            <h3>3. Moderation Oversight</h3>
+            <ul>
+                <li>Ensure rules are enforced properly </li>
+                <li>Review staff actions (warnings, bans, etc.) </li>
+                <li>Handle appeals and escalated situations </li>
+            </ul>
+
+            <h3>4. Staff Management</h3>
+            <ul>
+                <li>Host trainings and evaluations </li>
+                <li>Promote, demote, or discipline staff when necessary </li>
+                <li>Monitor staff performance and activity </li>
+            </ul>
+
+            <h3>5. Community Relations</h3>
+            <ul>
+                <li>Maintain a positive environment </li>
+                <li>Address community concerns professionally </li>
+                <li>Represent the server in a respectful manner </li>
             </ul>
         </div>
-        <div class="rank-category">
-            <span class="rank-title">Leadership Team</span>
-            <p class="holders">@orynxv_970; @sodakyo; @silexfvv; @1vryan; @nljr10; @nathan_2213; @jerry_girl15</p>
-        </div>
-    </div>
+    </section>
 
-    <div class="section">
-        <h2>🛠️ Directive & Development</h2>
-        <div class="rank-category">
-            <span class="rank-title">Directive Team</span>
-            <p class="holders">Director • Deputy Director • Assistant Director</p>
-        </div>
-        <div class="rank-category">
-            <span class="rank-title">Development Team</span>
-            <p class="holders">Bot Developer</p>
-        </div>
-    </div>
+    <section>
+        <h2>Expectations</h2>
+        <ul>
+            <li><strong>Professionalism:</strong> Always remain calm, respectful, and unbiased </li>
+            <li><strong>Activity:</strong> Be consistently active and available </li>
+            <li><strong>Decision Making:</strong> Make fair and logical decisions </li>
+            <li><strong>Confidentiality:</strong> Do not leak staff or administrative information </li>
+            <li><strong>Accountability:</strong> Take responsibility for your actions and decisions </li>
+        </ul>
+    </section>
 
-    <div class="section">
-        <h2>⚖️ High Ranks (SHR/HR)</h2>
-        <div class="rank-category">
-            <span class="rank-title">Management & IA</span>
-            <p class="holders">Community Manager(s) • IA Agent • IA Supervisor • Manager • Senior Manager</p>
-        </div>
-        <div class="rank-category">
-            <span class="rank-title">Supervisory Team</span>
-            <p class="holders">Staff Supervisor • Staff Supervisor Lead</p>
-        </div>
-    </div>
+    <section>
+        <h2>Permissions & Authority</h2>
+        <p>High Ranks have the ability to:</p>
+        <ul>
+            <li>Issue staff punishments </li>
+            <li>Approve or deny applications </li>
+            <li>Override lower staff decisions when necessary </li>
+            <li>Make announcements </li>
+        </ul>
+        <div class="note-box">Note: Abuse of power will result in disciplinary action.</div>
+    </section>
 
-    <div class="section">
-        <h2>🛡️ Admin & Moderation</h2>
-        <div class="rank-category">
-            <span class="rank-title">Staff Team</span>
-            <p class="holders">Junior Moderator • Senior Moderator • Administrator • Senior Administrator</p>
-        </div>
-    </div>
+    <section>
+        <h2>Staff Punishment System</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Level</th>
+                    <th>Action</th>
+                    <th>Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td>Verbal Warning</td><td>Minor Issue</td><td>Reminder For Small Mistakes.</td></tr>
+                <tr><td>Warning 1-2</td><td>Moderate Issue</td><td>Final Reminders For Minor Mistakes.</td></tr>
+                <tr><td>Strike 1-2</td><td>Serious Issue</td><td>Serious Mistakes. (3 strikes = Demotion) .</td></tr>
+                <tr><td>Suspension</td><td>Severe Issue</td><td>Temporary Removal From Duties.</td></tr>
+                <tr><td>Termination</td><td>Extreme Issue</td><td>Permanent Removal From Duties.</td></tr>
+            </tbody>
+        </table>
+        <p><em>Please follow this when you are handing out punishments to ensure you are giving the correct punishment. Giving a false punishment will result in an infraction.</em></p>
+    </section>
 
-    <div class="contact-info">
-        <strong>☀️ UPDATE INFORMATION</strong>
-        <p>Changes are updated every 6 hours. To request a change, DM <strong>@orynxv_970</strong> or <strong>@indianboiiparty</strong>.</p>
-        <p><em>Note: ETA response time is 3 hours.</em></p>
+    <section>
+        <h2>Decision Guidelines</h2>
+        <p>When Making Decisions, High Ranks Should:</p>
+        <ul>
+            <li>Review All Evidence Carefully </li>
+            <li>Remain Unbiased </li>
+            <li>Consult Other High Ranks If Needed </li>
+            <li>Follow Server Policies Strictly </li>
+            <li>Document All Major Issues/Actions </li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>Training</h2>
+        <div class="section-box" style="border-left-color: #b21f1f;">
+            <p>All of the high ranks must host <strong>2 to 3 training sessions a week</strong>, this is to ensure that all high ranks are hosting training. Failure to meet the standards of hosting training will result in a warning, if this is continuous it will cause a demotion.</p>
+        </div>
+    </section>
+
+    <section>
+        <h2>Promotions and Infractions</h2>
+        <ul>
+            <li>When promoting someone you must ensure they have a quota and they are truly active. Please make sure to be have fairness when promoting someone and please be unbiased of when you are promoting someone.</li>
+            <li>When you infract someone you must have a valid reason for the infraction. You must make every infraction appealable depending on the severity. Please be fair and unbiased with the infraction. Making any false infraction will result in an infraction.</li>
+            <li>When issuing a promotion, make sure to check out the Chain Of Command to be fully sure what rank to promote the respective staff member to.</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>Communication</h2>
+        <ul>
+            <li>Communicate Effectively With Other Staff Members, Low Rank Or High Rank.</li>
+            <li>Keep Staff Informed Of Any Form Of Changes.</li>
+            <li>Use Proper Channels To Communicate With Others, No Side-Chatting.</li>
+        </ul>
+        <div class="note-box" style="background-color: #f8d7da; color: #721c24; border-color: #f5c6cb;">Note: Side-Chatting Is Not Permitted, And If Caught You Will Face Punishment.</div>
+    </section>
+
+    <section>
+        <h2>Prohibited Actions</h2>
+        <div class="section-box" style="border-left-color: #b21f1f;">
+            <p>High Ranks Are <strong>NOT</strong> Allowed To:</p>
+            <ul>
+                <li>Abuse Their Authority </li>
+                <li>Show Favoritism or Bias Towards Anyone </li>
+                <li>Leak Confidential Information </li>
+                <li>Disrespect Community Members Or Staff Especially Senior High Ranks </li>
+                <li>Make Major Decisions Without Consulting Senior High Ranks </li>
+            </ul>
+        </div>
+    </section>
+
+    <section>
+        <h2>Tips For Success</h2>
+        <ul>
+            <li>Stay Organized And Active </li>
+            <li>Be Approachable But Authoritative </li>
+            <li>Handle Situations Calmy </li>
+            <li>Always Prioritize The Server’s Best Interests </li>
+            <li>Continuously Look For Ways To Improve Performance </li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>Conclusion</h2>
+        <p>Being A High Rank In Florida State Roleplay Is A Position Of Trust And Responsibility. Your Leadership Directly Impacts The Success And Reputation Of The Server. Uphold Standards, Be a Role Model For Low Ranks, And Maintain A Fair And Enjoyable Environment For All Members.</p>
+    </section>
+
+    <div class="footer-info">
+        <p><strong>Written By:</strong> @mr.perrydoc_r ; @orynxv_970 ; @_joshuaisverynice115 on Discord.</p>
+        <p><strong>Date:</strong> March 28, 2026 | <strong>Time:</strong> 2:35PM </p>
     </div>
 </div>
 
-<footer>
-    &copy; 2026 Florida State Roleplay | All rights reserved to @Marsfnr and @MisterCheetos.
+<footer style="text-align: center; margin-top: 30px; color: white; font-weight: bold; text-shadow: 1px 1px 5px rgba(0,0,0,0.7);">
+    &copy; 2026 Florida State Roleplay | Professionalism Starts with You.
 </footer>
 
 </body>
